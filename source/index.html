@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Запись в блоге</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <main>
+    <article class="article-page">
+      <div class="article-page__wrap">
+        <div class="article-page__title-wrap">
+          <h1>Путь JavaScript</h1>
+        </div>
+        <figure class="article-page__figure-books">
+          <div class="article-page__img-wrap">
+            <a class="article-page__date">
+              <span class="article-page__date-day">12</span>
+              <span class="article-page__date-month">апреля</span>
+            </a>
+            <img src="img/books.jpg" width="738" height="300" alt="Книги по JavaScript">
+          </div>
+          <figcaption>Можно выделить три основных направления для прогресса JavaScript <span class="article-page__text-mob">Middleюю</span></figcaption>
+        </figure>
+
+        <section class="quote">
+          <h2>Серверный JavaScript</h2>
+          <blockquote class="quote__block">
+          <p>
+            Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и
+            думают, что он и есть система. Они определяют систему в терминах графического интерфейса и считают, что
+            должны сразу начать работу с графическим интерфейсом. Они не понимают важнейшего принципа: ввод/вывод не
+            важен.
+          </p>
+          <cite>— Р. Мартин</cite>
+        </blockquote>
+        </section>
+      </div>
+
+      <section class="advertising">
+        <div class="advertising__wrap">
+          <h2 class="visually-hidden">Реклама</h2>
+          <p class="advertising__description">Реклама на <a href="http://blabla.com">blabla.com</a></p>
+          <a class="advertising__banner-link" href="http://blabla.com">
+            <img class="advertising__banner-mobile" src="img/banner-mobile.jpg" alt="Рекламный баннер">
+            <img class="advertising__banner-desk" src="img/banner-desk.jpg" alt="Рекламный баннер">
+          </a>
+        </div>
+      </section>
+
+      <section class="conclusion">
+        <h2>Заключение</h2>
+        <p>Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект. Абстрактное высказывание пространственно просветляет деструктивный символ. Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует мифопоэтический хронотоп. Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.</p>
+      </section>
+    </article>
+
+    <section class="feedback">
+      <h2 class="visually-hidden">Оставить отзыв</h2>
+      <div class="feedback__wrap">
+        <form class="feedback__form" action="#" method="post">
+          <fieldset class="feedback__rating">
+            <legend>Оцените статью</legend>
+            <div class="feedback__rating-area">
+              <input type="radio" id="star-5" name="rating" value="5">
+              <label for="star-5" title="Агонь"></label>
+              <input type="radio" id="star-4" name="rating" value="4">
+              <label for="star-4" title="Хорошо"></label>
+              <input type="radio" id="star-3" name="rating" value="3">
+              <label for="star-3" title="Сойдет"></label>
+              <input type="radio" id="star-2" name="rating" value="2">
+              <label for="star-2" title="Плохо"></label>
+              <input type="radio" id="star-1" name="rating" value="1">
+              <label for="star-1" title="Что за ..."></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="feedback__form-block">
+            <legend>Добавить комментарий к книге</legend>
+
+            <div class="feedback__form-wrap">
+              <div class="feedback__field-name">
+                <input id="form-name" type="text" placeholder=" ">
+                <label for="form-name">Имя</label>
+              </div>
+              <div class="feedback__field-email">
+                <input id="form-email" type="text" placeholder=" ">
+                <label for="form-email">E-mail</label>
+              </div>
+
+              <div class="feedback__select">
+                <button class="feedback__select-btn" type="button">Выберите книгу</button>
+                <ul class="feedback__select-list">
+                  <li tabindex="0" data-value="JavaScript ниндзя">JavaScript ниндзя</li>
+                  <li tabindex="0" data-value="Pragmatic Guide to JS">Pragmatic Guide to JavaScript</li>
+                  <li tabindex="0" data-value="Pro JavaScript Techniques">Pro JavaScript Techniques</li>
+                  <li tabindex="0" data-value="Выразительный JS">Выразительный JavaScript</li>
+                </ul>
+              </div>
+
+              <div class="feedback__field-message">
+                <textarea id="form-message" placeholder=" "></textarea>
+                <label for="form-message">Ваш отзыв</label>
+              </div>
+
+              <button class="feedback__btn-submit" type="submit">Отправить</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <section class="similar">
+      <h2>Похожие посты</h2>
+      <div class="similar__slider swiper-container">
+        <ul class="similar__slider-list swiper-wrapper">
+          <li class="similar__slider-item swiper-slide">
+            <a href="#">
+              <img class="similar__img-desk" src="img/react-desk.jpg" alt="Логотип React">
+              <img class="similar__img-mobile" src="img/react-mobile.jpg" alt="Логотип React">
+            </a>
+            <p>События жизненного цикла ReactJS</p>
+          </li>
+          <li class="similar__slider-item swiper-slide">
+            <a href="#">
+              <img class="similar__img-desk" src="img/grid-desk.jpg" alt="Логотип гридов">
+              <img class="similar__img-mobile" src="img/grid-mobile.jpg" alt="Логотип гридов">
+            </a>
+            <p>CSS Grids. Полное руководство</p>
+          </li>
+          <li class="similar__slider-item swiper-slide">
+            <a href="#">
+              <img class="similar__img-desk" src="img/js-desk.jpg" alt="Логотип JS">
+              <img class="similar__img-mobile" src="img/js-mobile.jpg" alt="Логотип JS">
+            </a>
+            <p>Асинхронность в JavaScript</p>
+          </li>
+        </ul>
+        <div class="similar__swiper-pagination swiper-pagination"></div>
+      </div>
+    </section>
+  </main>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

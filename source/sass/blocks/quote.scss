@@ -1,0 +1,78 @@
+.quote {
+  padding: 50px 0 53px;
+
+  h2 {
+    @include title-desktop;
+
+    margin: 0 0 27px;
+  }
+
+  &__block {
+    position: relative;
+
+    margin: 0;
+    padding-left: 64px;
+
+    p {
+      margin: 0 0 25px;
+
+      font-family: $segoe;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+
+      color: $black-color;
+    }
+
+    cite {
+      font-family: $segoe;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+
+      color: #777777;
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: -3px;
+
+      display: block;
+      width: 34px;
+      height: 34px;
+
+      background: url("../img/quote.svg") no-repeat center;
+      background-size: cover;
+
+      content: "";
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .quote {
+    padding: 33px 20px 53px 0;
+
+    h2 {
+      font-size: 20px;
+      margin: 0 0 22px;
+    }
+
+    &__block {
+      padding-left: 55px;
+
+      p {
+        margin: 0 0 18px;
+
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      cite {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

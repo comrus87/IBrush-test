@@ -1,0 +1,323 @@
+.feedback {
+  background-color: $bg-color;
+
+  &__wrap {
+    @include wrap-desktop;
+
+    padding-top: 38px;
+    padding-bottom: 40px;
+  }
+
+  &__form-block,
+  &__rating {
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    legend {
+      font-family: $consolas;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 18px;
+
+      color: $black-lt-color;
+    }
+  }
+
+  &__rating-area {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    margin-bottom: 37px;
+
+    input {
+      display: none;
+    }
+
+    label {
+      display: block;
+      width: 24px;
+      height: 23px;
+
+      background: url("../img/star.png") no-repeat center;
+      background-size: cover;
+
+      transition: all 0.2s ease-in-out;
+
+      cursor: pointer;
+
+      &:hover,
+      &:hover ~ label {
+        background: url("../img/star-active.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+
+    input:checked ~ label {
+      background: url("../img/star-active.png") no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &__field-name,
+  &__field-email {
+    position: relative;
+
+    width: 226px;
+
+    input {
+      display: block;
+      width: 100%;
+
+      padding: 22px 20px 6px;
+
+      @include input-text;
+
+      color: $input-text-color;
+      border: 1px solid $border-input-color;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    input + label {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+
+      @include input-text;
+
+      color: $label-color;
+
+      transition: all 0.1s ease-in-out;
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: 8px;
+    }
+  }
+
+  &__field-message {
+    position: relative;
+
+    width: 100%;
+    margin-top: 20px;
+
+    textarea {
+      display: block;
+      width: 100%;
+      min-height: 100px;
+      padding: 22px 20px 10px;
+
+      @include input-text;
+
+      color: $input-text-color;
+      border: 1px solid $border-input-color;
+      border-radius: 4px;
+      resize: none;
+      outline: none;
+    }
+
+    textarea + label {
+      position: absolute;
+      top: 14px;
+      left: 20px;
+
+      @include input-text;
+
+      color: $label-color;
+
+      transition: all 0.1s ease-in;
+    }
+
+    textarea:focus + label,
+    textarea:not(:placeholder-shown) + label {
+      top: 8px;
+    }
+  }
+
+  &__select {
+    position: relative;
+
+    width: 226px;
+  }
+
+  &__select-btn {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+
+    @include input-text;
+
+    background-color: $white-color;
+    color: $label-color;
+    border: 1px solid $border-input-color;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &::before {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+
+      display: block;
+      width: 8px;
+      height: 8px;
+
+      border-right: 2px solid $label-color;
+      border-bottom: 2px solid $label-color;
+
+      transition: all 0.2s ease-out;
+      transform: rotate(45deg);
+
+      content: "";
+    }
+  }
+
+  &__select-list {
+    position: absolute;
+    bottom: -182px;
+    z-index: 10;
+
+    width: 100%;
+    display: none;
+
+    @include list-default;
+
+    background-color: $white-color;
+    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    li {
+      padding: 14px 11px 15px;
+
+      @include input-text;
+
+      color: $input-text-color;
+      cursor: pointer;
+      border-left: 4px solid transparent;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        background-color: $bg-color;
+        border-left: 4px solid $blue-color;
+      }
+    }
+  }
+
+  &__btn-submit {
+    display: block;
+    width: 226px;
+    padding: 12px 0 14px;
+    margin-top: 20px;
+
+    font-family: $consolas;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 4px;
+    background-color: $blue-color;
+    color: $white-color;
+    outline: none;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__form-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+
+  &__select--active {
+    .feedback__select-list {
+      display: block;
+    }
+
+    .feedback__select-btn {
+      border: 1px solid $black-color;
+
+      &::before {
+        transform: translateY(4px) rotate(225deg);
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .feedback {
+    &__wrap {
+      padding: 36px 20px 40px;
+    }
+
+    &__form-block,
+    &__rating {
+      legend {
+        font-size: 16px;
+      }
+    }
+
+    &__rating-area {
+      margin-top: 12px;
+      margin-bottom: 23px;
+    }
+
+    &__field-name,
+    &__field-email {
+      width: 100%;
+      margin-bottom: 14px;
+
+      input {
+        padding: 20px 20px 6px;
+      }
+    }
+
+    &__select {
+      width: 100%;
+      margin-bottom: 14px;
+    }
+
+    &__btn-submit {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    &__select-btn {
+      padding: 14px 20px;
+    }
+
+    &__field-message {
+      margin-top: 0;
+
+      textarea {
+        min-height: 120px;
+      }
+    }
+  }
+}

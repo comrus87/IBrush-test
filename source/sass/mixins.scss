@@ -1,0 +1,32 @@
+@mixin list-default {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin wrap-mobile {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin wrap-desktop {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@mixin title-desktop {
+  font-family: $consolas;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+
+  color: $black-color;
+}
+
+@mixin input-text {
+  font-family: $arial;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+}
