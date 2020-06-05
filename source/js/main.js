@@ -3,7 +3,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   // Select logic
-
   const ENTER_KEYCODE = 13;
   const select = document.querySelector('.feedback__select');
   const selectList = document.querySelector('.feedback__select-list');
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function onSelectChange(evt) {
     const target = evt.target;
-    if (evt.target.tagName === 'LI') {
+    if (target.tagName === 'LI') {
       selectBtn.textContent = target.getAttribute('data-value');
     }
   }
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Slider
-
   const similarPage = document.querySelector('.similar');
 
   const sliderOptions = {

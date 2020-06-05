@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function onSelectChange(evt) {
     var target = evt.target;
 
-    if (evt.target.tagName === 'LI') {
+    if (target.tagName === 'LI') {
       selectBtn.textContent = target.getAttribute('data-value');
     }
   }
